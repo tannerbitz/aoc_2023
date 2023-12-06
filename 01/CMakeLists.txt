@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.13)
+
+project(aoc_day1 LANGUAGES CXX)
+
+add_executable(${PROJECT_NAME}
+  main.cpp
+)
+
+install(
+  TARGETS ${PROJECT_NAME}
+  EXPORT ${PROJECT_NAME}Targets
+  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+)
+
+install(
+  FILES inputs.txt
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
+)
